@@ -1,6 +1,6 @@
-package cz.vibri.GremlinsHunter.app;
+package cz.vibri.gremlinshunter.app;
 
-import cz.vibri.GremlinsHunter.BattleField;
+import cz.vibri.gremlinshunter.BattleField;
 
 public class Hunt {
 

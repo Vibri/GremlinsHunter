@@ -1,6 +1,6 @@
-package cz.vibri.GremlinsHunter.items;
+package cz.vibri.gremlinshunter.items;
 
-import cz.vibri.GremlinsHunter.interfaces.ISignAndPosition;
+import cz.vibri.gremlinshunter.interfaces.ISignAndPosition;
 
 public abstract class Item implements ISignAndPosition {
 
@@ -11,12 +11,6 @@ public abstract class Item implements ISignAndPosition {
 		this.x = x;
 		this.y = y;
 	}
-
-	@Override
-	public abstract char getSign();
-
-	@Override
-	public abstract int getWeight();
 
 	@Override
 	public int getX() {

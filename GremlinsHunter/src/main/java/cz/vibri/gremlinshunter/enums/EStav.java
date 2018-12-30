@@ -1,4 +1,4 @@
-package cz.vibri.GremlinsHunter.enums;
+package cz.vibri.gremlinshunter.enums;
 
 public enum EStav {
 

@@ -1,11 +1,11 @@
-package cz.vibri.GremlinsHunter.humans;
+package cz.vibri.gremlinshunter.humans;
 
 import java.util.Random;
 
-import cz.vibri.GremlinsHunter.enums.EStav;
-import cz.vibri.GremlinsHunter.interfaces.IAkcni;
-import cz.vibri.GremlinsHunter.interfaces.IInformujici;
-import cz.vibri.GremlinsHunter.interfaces.ISignAndPosition;
+import cz.vibri.gremlinshunter.enums.EStav;
+import cz.vibri.gremlinshunter.interfaces.IAkcni;
+import cz.vibri.gremlinshunter.interfaces.IInformujici;
+import cz.vibri.gremlinshunter.interfaces.ISignAndPosition;
 
 public class Human implements IInformujici, IAkcni, ISignAndPosition {
 
@@ -20,6 +20,7 @@ public class Human implements IInformujici, IAkcni, ISignAndPosition {
 	protected int pL;
 	protected int pD;
 	protected int pU;
+	protected Random random = new Random();
 
 	public Human(int x, int y) {
 		this.x = x;
@@ -92,7 +93,7 @@ public class Human implements IInformujici, IAkcni, ISignAndPosition {
 		if (this.x != x || this.y != y) {
 			return 0;
 		}
-		Random random = new Random();
+
 		int possibility = random.nextInt(100);
 		if (possibility < uhyb) {
 			return 0;

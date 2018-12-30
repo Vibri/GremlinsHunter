@@ -1,4 +1,4 @@
-package cz.vibri.GremlinsHunter.interfaces;
+package cz.vibri.gremlinshunter.interfaces;
 
 public interface IInformujici {
 

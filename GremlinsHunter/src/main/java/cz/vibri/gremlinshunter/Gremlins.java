@@ -1,11 +1,11 @@
-package cz.vibri.GremlinsHunter;
+package cz.vibri.gremlinshunter;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import cz.vibri.GremlinsHunter.aliens.Gizmo;
-import cz.vibri.GremlinsHunter.interfaces.IAkcni;
-import cz.vibri.GremlinsHunter.interfaces.IInformujici;
+import cz.vibri.gremlinshunter.aliens.Gizmo;
+import cz.vibri.gremlinshunter.interfaces.IAkcni;
+import cz.vibri.gremlinshunter.interfaces.IInformujici;
 
 public class Gremlins implements IInformujici, IAkcni {
 

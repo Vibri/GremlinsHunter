@@ -1,4 +1,4 @@
-package cz.vibri.GremlinsHunter.humans;
+package cz.vibri.gremlinshunter.humans;
 
 public class Hunter extends Human {
 

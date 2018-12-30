@@ -1,16 +1,16 @@
-package cz.vibri.GremlinsHunter;
+package cz.vibri.gremlinshunter;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import cz.vibri.GremlinsHunter.aliens.Gizmo;
-import cz.vibri.GremlinsHunter.humans.Human;
-import cz.vibri.GremlinsHunter.humans.Hunter;
-import cz.vibri.GremlinsHunter.interfaces.ISignAndPosition;
-import cz.vibri.GremlinsHunter.items.Food;
-import cz.vibri.GremlinsHunter.items.Item;
-import cz.vibri.GremlinsHunter.items.Water;
+import cz.vibri.gremlinshunter.aliens.Gizmo;
+import cz.vibri.gremlinshunter.humans.Human;
+import cz.vibri.gremlinshunter.humans.Hunter;
+import cz.vibri.gremlinshunter.interfaces.ISignAndPosition;
+import cz.vibri.gremlinshunter.items.Food;
+import cz.vibri.gremlinshunter.items.Item;
+import cz.vibri.gremlinshunter.items.Water;
 
 public class BattleField {
 
@@ -19,6 +19,7 @@ public class BattleField {
 	private Gremlins gremlins;
 	private Humans humans;
 	private List<Item> items;
+	private Random random = new Random();
 
 	public BattleField(int xs, int ys) {
 		this.xs = xs;
@@ -46,7 +47,6 @@ public class BattleField {
 	}
 
 	private void initHuman() {
-		Random random = new Random();
 		int firstHuman = random.nextInt(xs * ys - 2) + 1;
 		int secoundHuman = random.nextInt(xs * ys - 2) + 1;
 		while (firstHuman == secoundHuman) {
@@ -59,7 +59,6 @@ public class BattleField {
 	}
 
 	private void initWater() {
-		Random random = new Random();
 		for (int i = 1; i < xs * ys - 2; i++) {
 			int prav = random.nextInt(11);
 			if (prav <= 2) {
@@ -77,7 +76,6 @@ public class BattleField {
 	}
 
 	private void initFood() {
-		Random random = new Random();
 		Position position = getPosition(random.nextInt(xs * ys - 2) + 1);
 		addItem(new Food(position.getX(), position.getY()));
 	}
@@ -124,7 +122,7 @@ public class BattleField {
 	private void place(ISignAndPosition[][] battleField, List<? extends ISignAndPosition> list) {
 		for (ISignAndPosition item : list) {
 			ISignAndPosition sign = battleField[item.getX()][item.getY()];
-			if (sign == null || (((ISignAndPosition) item).getWeight() > sign.getWeight())) {
+			if (sign == null || (item.getWeight() > sign.getWeight())) {
 				battleField[item.getX()][item.getY()] = item;
 			}
 		}

@@ -1,14 +1,14 @@
-package cz.vibri.GremlinsHunter.aliens;
+package cz.vibri.gremlinshunter.aliens;
 
 public class TurboGremlin extends Gizmo {
 
-	protected int MAX_ZIVOTU = 2;
+	private static final int MAX_ZIVOTU = 2;
 
 	public TurboGremlin(int x, int y) {
 		super(x, y);
-		this.pS = 0;
-		this.pocetZivotu = MAX_ZIVOTU;
-		this.uhyb = 40;
+		setpS(0);
+		setPocetZivotu(MAX_ZIVOTU);
+		setUhyb(40);
 	}
 
 	@Override

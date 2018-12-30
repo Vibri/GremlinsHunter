@@ -1,10 +1,10 @@
-package cz.vibri.GremlinsHunter.aliens;
+package cz.vibri.gremlinshunter.aliens;
 
 public class Gremlin extends Gizmo {
 
 	public Gremlin(int x, int y) {
 		super(x, y);
-		this.pS = 8;
+		setpS(8);
 	}
 
 	@Override

@@ -1,4 +1,4 @@
-package cz.vibri.GremlinsHunter.items;
+package cz.vibri.gremlinshunter.items;
 
 public class Food extends Item {
 
