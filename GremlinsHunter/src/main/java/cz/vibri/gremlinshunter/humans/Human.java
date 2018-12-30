@@ -9,7 +9,7 @@ import cz.vibri.gremlinshunter.interfaces.ISignAndPosition;
 
 public class Human implements IInformujici, IAkcni, ISignAndPosition {
 
-	protected int MAX_ZIVOTU = 1;
+	private static final int MAX_ZIVOTU = 1;
 	protected int x;
 	protected int y;
 	protected int pocetZivotu;

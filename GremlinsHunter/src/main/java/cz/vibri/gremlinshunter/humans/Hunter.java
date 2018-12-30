@@ -2,7 +2,7 @@ package cz.vibri.gremlinshunter.humans;
 
 public class Hunter extends Human {
 
-	protected int MAX_ZIVOTU = 6;
+	private static final int MAX_ZIVOTU = 6;
 
 	public Hunter(int x, int y) {
 		super(x, y);

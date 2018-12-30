@@ -9,7 +9,7 @@ import cz.vibri.gremlinshunter.interfaces.ISignAndPosition;
 
 public class Gizmo implements IInformujici, IAkcni, ISignAndPosition {
 
-	private int MAX_ZIVOTU = 1;
+	private static final int MAX_ZIVOTU = 1;
 	private int x;
 	private int y;
 	private int pocetZivotu;
